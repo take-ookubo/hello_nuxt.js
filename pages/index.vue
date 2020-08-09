@@ -13,6 +13,12 @@
           counter
         </a>
         <a
+          href="count_ts"
+          class="button--grey"
+        >
+          counter_ts
+        </a>
+        <a
           href="posts"
           class="button--grey"
         >
