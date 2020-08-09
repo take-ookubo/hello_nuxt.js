@@ -12,6 +12,12 @@
         >
           counter
         </a>
+        <a
+          href="posts"
+          class="button--grey"
+        >
+          posts
+        </a>
       </div>
     </div>
   </div>
