@@ -40,6 +40,7 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
+    'modules/typescript.js'
   ],
   /*
   ** Build configuration
