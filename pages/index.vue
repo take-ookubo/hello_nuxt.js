@@ -29,16 +29,19 @@
         </a>
       </div>
     </div>
+    <layout-footer />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Logo from '~/components/Logo.vue'
+import LayoutFooter from '~/components/layouts/Footer'
 
 export default Vue.extend({
   components: {
-    Logo
+    Logo,
+    LayoutFooter,
   }
 })
 </script>
