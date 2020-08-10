@@ -1,12 +1,10 @@
-<template>
-  <section class="container">
-    <a href="/">Top</a>
-    <div>
-      <h1>counter</h1>
-      <p>count={{count}}</p>
-      <button @click="addCount">カウントアップ</button>
-    </div>
-  </section>
+<template lang="pug">
+  section(class="container")
+    a(href="/") Top
+    div
+      h1 counter(template: pug)
+      p count={{count}}
+      button(@click="addCount") カウントアップ
 </template>
 
 <script>
