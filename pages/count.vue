@@ -2,7 +2,7 @@
   section(class="container")
     a(href="/") Top
     div
-      h1 counter(template: pug)
+      h1.red counter(template: pug)
       p count={{count}}
       button(@click="addCount") カウントアップ
 </template>
@@ -19,3 +19,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.red {
+  color: red;
+}
+</style>
