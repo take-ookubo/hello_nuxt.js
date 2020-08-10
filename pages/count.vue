@@ -3,7 +3,7 @@
     a(href="/") Top
     div
       h1.red counter(template: pug)
-      p count={{count}}
+      p.global_blue count={{count}}
       button(@click="addCount") カウントアップ
 </template>
 
