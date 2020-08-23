@@ -22,6 +22,8 @@
         <a href="form" class="button--grey">
           form
         </a>
+        <a href="life_cycle">Life cycle SSR</a>, <nuxt-link to="/life_cycle">Life cycle:SPA</nuxt-link>
+        <br />
       </div>
     </div>
   </div>
