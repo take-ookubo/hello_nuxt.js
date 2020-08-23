@@ -1,6 +1,9 @@
 
 export default {
   mode: 'universal',
+  server: {
+    port: 3030,
+  },
   /*
   ** Headers of the page
   */
