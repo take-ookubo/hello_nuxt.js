@@ -1,17 +1,12 @@
 <template>
   <div class="container">
     <div>
-      <logo />
-      <h1 class="title">
-        nuxt_web
-      </h1>
+      <h1>nuxt_web</h1>
       <div class="links">
-        <a
-          href="count"
-          class="button--grey"
-        >
-          counter
-        </a>
+        <a href="count_data">count for data(SSR)</a>, <nuxt-link to="/count_data">count for data(SPA)</nuxt-link>
+        <br />
+        <a href="count_store">count for store(SSR)</a>, <nuxt-link to="/count_store">count for store(SPA)</nuxt-link>
+        <br />
         <a
           href="count_ts"
           class="button--grey"
