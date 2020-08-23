@@ -3,6 +3,8 @@
     <div>
       <h1>nuxt_web</h1>
       <div class="links">
+        <a href="vuex">vuex(SSR)</a>, <nuxt-link to="/vuex">vuex(SPA)</nuxt-link>
+        <br />
         <a href="count_data">count for data(SSR)</a>, <nuxt-link to="/count_data">count for data(SPA)</nuxt-link>
         <br />
         <a href="count_store">count for store(SSR)</a>, <nuxt-link to="/count_store">count for store(SPA)</nuxt-link>
