@@ -1,37 +1,44 @@
 export const state = () => ({
+  // 仮でログイン情報を保持する事を想定
   me: null,
-  you: null,
 })
 
 export const mutations = {
-  init(state, data: null | object) {
+  init(state, key: null | object) {
+    console.log('--- store.init ---')
     if(state.me){
       for(let v in state.me){
-        console.log(v);
-        delete state.me[v];
+        console.log(`delete: ${v}`)
+        delete state.me[v]
       }
     }else{
-      state.me = {};
+      state.me = {}
+    }
+    if(key) {
+      state.me[key] = true
     }
   }
   ,
   addVal(state, key, val) {
+    console.log('--- store.addVal ---')
     state.me[key] = true
-  },
-  setYourName(state, data: null | object) {
-    state.you = data
+    console.log('store: ' + JSON.stringify(state.me, null, 2))
   },
 }
 
 export const actions = {
   async nuxtServerInit({ commit, dispatch }) {
-    console.log('nuxtServerInit')
-    commit('init')
-    commit('addVal', 'nuxtServerInit')
+    console.log('--- nuxtServerInit ----')
+    // nuxtClientInit で上書きされる？
+    commit('init', 'nuxtServerInit')
+    // 初期化しとかないとエラーになる
+    // commit('addVal', 'nuxtServerInit')
   },
   async nuxtClientInit({ commit, dispatch }) {
-    console.log('nuxtClientInit')
-    commit('addVal', 'nuxtClientInit')
+    console.log('--- nuxtClientInit ---')
+    commit('init', 'nuxtClientInit')
+    // 初期化しとかないとエラーになる
+    // commit('addVal', 'nuxtClientInit')
   },
 }
 
@@ -41,12 +48,6 @@ export const getters = {
       return state.me
     }
     return {getters: true}
-  },
-  you(state): Member | null {
-    if (state.you) {
-      return state.me
-    }
-    return {}
   },
 }
 
